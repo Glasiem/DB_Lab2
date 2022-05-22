@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" class="h-100" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:insert="blocks/head">
+</head>
+
+<body class="h-100 text-white bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header th:insert="blocks/header">
+    </header>
+
+    <main class="px-3">
+
+        <div class="form-container">
+
+            <div class="categories p-3">
+                <h3>Запити</h3>
+            </div>
+
+            <div th:if="${query1}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query1}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query1" method="post">
+                <text>Знайти всіх вітюберів з агенства Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+            <div th:if="${query2}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query2}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query2" method="post">
+                <text>Знайти всі покоління агенства, у якому є вітюбер Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query3}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query3}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query3" method="post">
+                <text>Знайти кількість вітюберів у агенстві Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query4}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query4}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query4" method="post">
+                <text>Знайти агенства, у яких принаймні Х поколінь</text>
+                <input type="number" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query5}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query5}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query5" method="post">
+                <text>Знайти СЕО агенства, у якому є вітюбер Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query6}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query6}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query6" method="post">
+                <text>Знайти вітюберів, які мають точно такі ж медіа, що і вітюбер Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query7}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query7}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query7" method="post">
+                <text>Знайти вітюберів, які мають усі медіа вітюбера Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+
+            <div th:if="${query8}" class="alertWarning">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <text th:text="${query8}"></text>
+                <text> <br>𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏𓆏</text>
+            </div>
+
+            <form style="padding: 2%" action="/query8" method="post">
+                <text>Знайти вітюберів, які мають лише ті медіа, які є у вітюбера Х</text>
+                <input type="text" name="contents" placeholder="" class="form-control" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Виконати</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="mt-auto text-white-50">
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
+
