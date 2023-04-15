@@ -25,7 +25,7 @@ public class ManagerService {
 
     public String createManagerCheck(Manager manager) {
         manager.setName(manager.getName().trim());
-        manager.setName(manager.getInfo().trim());
+        manager.setInfo(manager.getInfo().trim());
         if (manager.getName().equals("") ||
                 manager.getInfo().equals("")){
             return "Не залишайте поля порожніми";

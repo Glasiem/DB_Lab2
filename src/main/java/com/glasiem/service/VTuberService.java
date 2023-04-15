@@ -35,7 +35,7 @@ public class VTuberService {
 
     public String createVTuberCheck(VTuber vtuber) {
         vtuber.setName(vtuber.getName().trim());
-        vtuber.setName(vtuber.getInfo().trim());
+        vtuber.setInfo(vtuber.getInfo().trim());
         if (vtuber.getName().equals("") ||
                 vtuber.getInfo().equals("")){
             return "Не залишайте поля порожніми";

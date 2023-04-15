@@ -44,7 +44,7 @@ public class GenerationService {
 
     public String createGenerationCheck(Generation generation) {
         generation.setName(generation.getName().trim());
-        generation.setName(generation.getInfo().trim());
+        generation.setInfo(generation.getInfo().trim());
         if (generation.getName().equals("") ||
                 generation.getInfo().equals("")){
             return "Не залишайте поля порожніми";

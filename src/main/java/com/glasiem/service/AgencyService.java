@@ -47,7 +47,7 @@ public class AgencyService {
 
     public String createAgencyCheck(Agency agency) {
         agency.setName(agency.getName().trim());
-        agency.setName(agency.getInfo().trim());
+        agency.setInfo(agency.getInfo().trim());
         if (agency.getName().equals("") ||
                 agency.getInfo().equals("")){
             return "Не залишайте поля порожніми";
@@ -60,7 +60,7 @@ public class AgencyService {
 
     public String editAgencyCheck(Agency agency) {
         agency.setName(agency.getName().trim());
-        agency.setName(agency.getInfo().trim());
+        agency.setInfo(agency.getInfo().trim());
         if (agency.getName().equals("") ||
                 agency.getInfo().equals("")){
             return "Не залишайте поля порожніми";
